@@ -1,0 +1,22 @@
+{
+  "name": "Magic-Mirror-iFrame",
+  "version": "1.0.0",
+  "description": "iFrame module for Magic MIrror",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamLewis0602/MMM-Traffic"
+  },
+  "keywords": [
+    "magic mirror",
+    "smart mirror",
+    "iFrame"
+  ],
+  "author": "Ben Williams",
+  "license": "MIT",
+  "homepage": "https://github.com/desertblade/iFrame#readme",
+  "dependencies": {
+    "request": "latest",
+    "express": "latest",
+    "body-parser" : "latest"
+    }
+}

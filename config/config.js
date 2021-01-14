@@ -38,6 +38,13 @@ var config = {
 	// true, force serveronly mode, because you want to.. no UI on this device
 
 	modules: [
+		// {
+		//     module: 'MMM-SmartTouch',
+		//     position: 'bottom_center',    // This can be any of the regions.(bottom-center Recommended)
+		//     config: {
+		//         // The config property is optional.
+	 //    	}
+		// },
 		{
 			module: "alert",
 		},
@@ -61,45 +68,57 @@ var config = {
 				]
 			}
 		},
+		// {
+		// 	module: "compliments",
+		// 	position: "lower_third"
+		// },
 		{
-			module: "compliments",
-			position: "lower_third"
-		},
-		{
-			module: "currentweather",
-			position: "top_right",
-			config: {
-				location: "New York",
-				locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				appid: "YOUR_OPENWEATHER_API_KEY"
+		module: 'iFrame',
+		position: 'bottom_bar',	// This can be any of the regions.
+		config: {
+			// See 'Configuration options' for more information.
+				url: "http://192.168.1.30:8123/lovelace",
+				width: "100%", // Optional. Default: 100%
+				height: "800px", //Optional. Default: 100px
+				scrolling:"no",
 			}
-		},
-		{
-			module: "weatherforecast",
-			position: "top_right",
-			header: "Weather Forecast",
-			config: {
-				location: "New York",
-				locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				appid: "YOUR_OPENWEATHER_API_KEY"
-			}
-		},
-		{
-			module: "newsfeed",
-			position: "bottom_bar",
-			config: {
-				feeds: [
-					{
-						title: "New York Times",
-						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-					}
-				],
-				showSourceTitle: true,
-				showPublishDate: true,
-				broadcastNewsFeeds: true,
-				broadcastNewsUpdates: true
-			}
-		},
+		}
+	
+		// {
+		// 	module: "currentweather",
+		// 	position: "top_right",
+		// 	config: {
+		// 		location: "New York",
+		// 		locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
+		// 		appid: "YOUR_OPENWEATHER_API_KEY"
+		// 	}
+		// },
+		// {
+		// 	module: "weatherforecast",
+		// 	position: "top_right",
+		// 	header: "Weather Forecast",
+		// 	config: {
+		// 		location: "New York",
+		// 		locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
+		// 		appid: "YOUR_OPENWEATHER_API_KEY"
+		// 	}
+		// },
+		// {
+		// 	module: "newsfeed",
+		// 	position: "bottom_bar",
+		// 	config: {
+		// 		feeds: [
+		// 			{
+		// 				title: "New York Times",
+		// 				url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+		// 			}
+		// 		],
+		// 		showSourceTitle: true,
+		// 		showPublishDate: true,
+		// 		broadcastNewsFeeds: true,
+		// 		broadcastNewsUpdates: true
+		// 	}
+		// },
 	]
 };
 
